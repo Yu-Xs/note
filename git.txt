@@ -1,0 +1,24 @@
+設定
+	git config --global user.name "yuXs"
+	git config --global user.email "410606@gm.tnfsh.tn.edu.tw"
+
+	git config --list
+
+	git config --global color.ui true 開啟顏色
+
+	git init
+
+	git clone "(url)"
+	git status
+	git add (file)
+	git commit -(a)m "(string)"
+	git log --stat
+	git branch
+	git branch (branchName)
+	git rebase (userName)
+	git reset HEAD <file>
+	git diff
+
+
+.gitignore
+	FileName.副檔名
