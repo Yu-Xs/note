@@ -14,11 +14,12 @@
 	git commit -(a)m "(string)"
 	git log --stat
 	git branch
-	git branch (branchName)
+	git branch <-d> (branchName)
 	git rebase (userName)
 	git reset HEAD <file>
 	git diff
-
-
+	git remote add origin <url>
+	git push -u origin <name>
+	git checkout <branchName>
 .gitignore
 	FileName.副檔名
