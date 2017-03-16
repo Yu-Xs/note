@@ -1,0 +1,19 @@
+java
+	整數
+		byte	8byte
+		short	16byte
+		int		32byte
+		long	64byte
+	浮點數
+		float	32byte
+		double	64byte
+	布林
+		boolean	1byte
+	字元
+		char	16byte
+		
+	long n = 123l
+	float n = 123.3f
+	
+	
+	

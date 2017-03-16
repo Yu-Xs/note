@@ -1,0 +1,60 @@
+iostream
+	cin cout 
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	math.h
+
+	sqrt(int);
+	pow(int,int)
+
+	cin.get(char)
+	getline(cin , string)
+
+
+windows.h
+	
+	HANDLE OpenProcess(DWORD dwDesiredAccess, BOOL bInheritHandle, DWORD dwProcessId );
+		a.	dwDesiredAccess：想拥有的该进程访问权限
+			PROCESS_ALL_ACCESS  				//所有能获得的权限
+			PROCESS_CREATE_PROCESS  			//需要创建一个进程
+			PROCESS_CREATE_THREAD   			//需要创建一个线程
+			PROCESS_DUP_HANDLE      			//重复使用DuplicateHandle句柄
+			PROCESS_QUERY_INFORMATION   		//获得进程信息的权限，如它的退出代码、优先级
+			PROCESS_QUERY_LIMITED_INFORMATION  	/*获得某些信息的权限，如果获得了PROCESS_QUERY_INFORMATION，也拥有 PROCESS_QUERY_LIMITED_INFORMATION 一样的权限
+			PROCESS_SET_INFORMATION    			//设置某些信息的权限，如进程优先级
+			PROCESS_SET_QUOTA          			//设置内存限制的权限，使用SetProcessWorkingSetSize
+			PROCESS_SUSPEND_RESUME     			//暂停或恢复进程的权限
+			PROCESS_TERMINATE          			//终止一个进程的权限，使用TerminateProcess
+			PROCESS_VM_OPERATION       			//操作进程内存空间的权限(可用VirtualProtectEx和WriteProcessMemory)
+			PROCESS_VM_READ            			//读取进程内存空间的权限，可使用ReadProcessMemory
+			PROCESS_VM_WRITE           			//读取进程内存空间的权限，可使用WriteProcessMemory
+			SYNCHRONIZE               			//等待进程终止
+		b. bInheritHandle：表示所得到的进程句柄是否可以被继承
+		c. dwProcessId：被打开进程的PID
+	
+	BOOL WINAPI VirtualProtectEx(
+		__in   HANDLE hProcess,
+		__in   LPVOID lpAddress,
+		__in   SIZE_T dwSize,
+		__in   DWORD flNewProtect,
+		__out  PDWORD lpflOldProtect
+	);
+	
+	BOOL WINAPI ReadProcessMemory(
+		__in   HANDLE hProcess,
+		__in   LPCVOID lpBaseAddress,			//對方地址
+		__out  LPVOID lpBuffer,					//我方地址
+		__in   SIZE_T nSize,					
+		__out  SIZE_T *lpNumberOfBytesRead
+	);
+	
+	BOOL WINAPI WriteProcessMemory(
+		__in   HANDLE hProcess,
+		__in   LPVOID lpBaseAddress,
+		__in   LPCVOID lpBuffer,
+		__in   SIZE_T nSize,
+		__out  SIZE_T *lpNumberOfBytesWritten
+	);
+	
+	
