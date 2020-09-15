@@ -1,6 +1,6 @@
 設定
 	git config --global user.name "yuXs"
-	git config --global user.email "410606@gm.tnfsh.tn.edu.tw"
+	git config --global user.email "(email)"
 
 	git config --list
 
